@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Build";
+}
+
+
+@model Report
+
+    <div class="tile --NOVALUE--">
+
+        <strong>Data/Hora:</strong>   @DateTime.Now.ToString("dd/MM/yyy HH:mm:ss")          <br />      <br />
+        <strong>Selecione o arquivo!</strong>
+    </div>
+<br>
+
+@if (ViewData["Message"] != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewData["Message"]");
+            };
+    </script>
+}
